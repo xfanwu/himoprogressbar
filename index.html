@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Himo 的进度条...</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="progress">
+      <div id="bar"></div>
+    </div>
+
+    <br>
+    <button onclick="move()">Click me</button>
+  </div>
+</body>
+
+<script>
+  function move() {
+    var elem = document.getElementById("bar"); 
+    var width = 1;
+    var id = setInterval(frame, 400);
+    function frame() {
+      var random = Math.random();
+      if (width >= 100) {
+        clearInterval(id);
+      } else {
+        width = width + random; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+</script>
+</html>
