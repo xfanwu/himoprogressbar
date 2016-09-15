@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <title>Himo 的进度条...</title>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper _absolute-center">
+    <div id="title">
+      <h1>Himo的进度条</h1>
+    </div>
     <div id="progress">
       <div id="bar"></div>
     </div>
 
     <br>
-    <button onclick="move()">Click me</button>
+    <button onclick="move()">走你！</button>
   </div>
 </body>
 
 <script>
   function move() {
     var elem = document.getElementById("bar"); 
+    var button = document.getElementsByTagName("button")[0];
+    button.disabled = true;
     var width = 1;
-    var id = setInterval(frame, 400);
+    var id = setInterval(frame, 40);
     function frame() {
-      var random = Math.random();
+      var random = Math.random() / 10;
       if (width >= 100) {
         clearInterval(id);
+        button.disabled = false;
       } else {
         width = width + random; 
         elem.style.width = width + '%'; 
