@@ -14,6 +14,7 @@ button{
   background-color: #BEBFC0;
   border-radius: 3px;
   border: none;
+  margin-top: 70px;
 }
 
 ._absolute-center{
@@ -37,7 +38,7 @@ button{
   height: 20px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  margin: 50px auto 70px auto;
+  margin: 50px auto auto auto;
 }
 
 #bar{
@@ -46,4 +47,8 @@ button{
   height: 100%;
   background-color: #4C4C4C; 
   border-radius: 10px;
+}
+
+#percent{
+  padding: 20px;
 }
